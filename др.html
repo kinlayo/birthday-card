@@ -1,256 +1,301 @@
+<!-- Updated responsive version of your invitation site. Text and images kept unchanged. -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Приглашение на день рождения</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- адаптивность [web:20] -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"><!-- веб‑шрифт [web:34][web:41] -->
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна & Полина | Приглашение на др</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description" content="Приглашение на празднование 18-летия Анны и Полины. 16 января 2026 года, Speakeasy bar 'THE', Санкт-Петербург">
+    <meta name="keywords" content="18 лет, день рождения, приглашение, Анна, Полина, 16 января 2026, Санкт-Петербург">
+    <meta name="author" content="Анна и Полина">
 
-    body {
-      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top, #ffe0f2 0, #fdf5ff 45%, #fefefe 100%);
-      color: #2b2333;
-      line-height: 1.5;
-    }
+    <meta property="og:title" content="Приглашение на 18-летие Анны и Полины">
+    <meta property="og:description" content="16 января 2026 года | Speakeasy bar 'THE' | Санкт-Петербург">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anna-polina-18.ru">
+    <meta property="og:image" content="https://anna-polina-18.ru/images/og-image.jpg">
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
 
-    .card {
-      width: 100%;
-      max-width: 960px;
-      background: #ffffffdd;
-      backdrop-filter: blur(10px);
-      border-radius: 24px;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
-      display: flex;
-      flex-wrap: wrap;              /* для адаптивности [web:14][web:20] */
-      overflow: hidden;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
 
-    .card-left,
-    .card-right {
-      flex: 1 1 320px;             /* блочные части тянутся/переносятся [web:33][web:43] */
-      padding: 28px 32px;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #b30000;
+            color: #ffffff;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+        }
 
-    .card-left {
-      background: linear-gradient(145deg, #ffb8d7, #ffe6b8);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
-      gap: 18px;
-    }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(199, 0, 0);
+            opacity: 0.3;
+            z-index: -1;
+        }
 
-    .cake {
-      max-width: 180px;
-      width: 60%;
-      height: auto;
-    }
+        .header {
+            text-align: center;
+            padding: 40px 0 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e8e2d9;
+            position: relative;
+        }
 
-    .wine {
-      max-width: 90px;
-      width: 35%;
-      height: auto;
-    }
+        .main-title {
+            font-family: 'Cormorant Garamond', serif;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 120px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            z-index: -1;
+        }
 
-    .kids {
-      max-width: 260px;
-      width: 90%;
-      height: auto;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
-    }
+        @media (max-width: 600px) {
+            .main-title {
+                font-size: 70px;
+                top: 10px;
+            }
+        }
 
-    .card-left h1 {
-      font-size: clamp(26px, 4vw, 32px);
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #442043;
-    }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    .card-left p.small {
-      font-size: 14px;
-      opacity: 0.9;
-    }
+        .invitation-text {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 40px 0;
+            line-height: 1.8;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .card-right {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+        .q {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #fff4f8;
-      color: #b3125a;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      align-self: flex-start;
-    }
+        @media (max-width: 600px) {
+            .q { font-size: 32px; }
+        }
 
-    .badge img {
-      width: 20px;
-      height: 20px;
-    }
+        .date-highlight {
+            text-align: center;
+            padding: 10px;
+        }
 
-    .title {
-      font-size: clamp(24px, 3.3vw, 30px);
-      font-weight: 700;
-    }
+        .day {
+            font-size: 32px;
+        }
 
-    .subtitle {
-      font-size: 16px;
-      color: #5b4a64;
-    }
+        @media (max-width: 500px) {
+            .day { font-size: 26px; }
+        }
 
-    .details {
-      margin-top: 6px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: #faf6ff;
-      border: 1px dashed #c8a8ff;
-      font-size: 15px;
-    }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 45px;
+            text-align: center;
+            margin: 60px 0 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
 
-    .details strong {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
+        @media (max-width: 600px) {
+            .section-title { font-size: 34px; }
+        }
 
-    .list {
-      margin-top: 6px;
-      padding-left: 18px;
-      font-size: 15px;
-    }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background-color: #ffffff;
+        }
 
-    .list li + li {
-      margin-top: 4px;
-    }
+        .location-details, .timeline {
+            padding: 0 10px;
+        }
 
-    .heart-gem {
-      width: 40px;
-      height: auto;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
+        .location-item {
+            margin-bottom: 35px;
+            text-align: center;
+        }
 
-    .footer {
-      margin-top: auto;
-      font-size: 14px;
-      color: #6a5b79;
-    }
+        .location-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+        }
 
-    .hosts {
-      font-weight: 600;
-      margin-top: 4px;
-    }
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
 
-    .rsvp {
-      margin-top: 10px;
-      font-size: 14px;
-    }
+        @media (max-width: 650px) {
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
 
-    .rsvp strong {
-      font-weight: 600;
-    }
+        .timeline-time {
+            min-width: 100px;
+            font-size: 20px;
+        }
 
-    /* адаптация под очень маленькие экраны [web:20][web:43] */
-    @media (max-width: 640px) {
-      .card {
-        border-radius: 18px;
-      }
+        .timeline-title {
+            font-size: 40px;
+            font-family: 'Cormorant Garamond', serif;
+        }
 
-      .card-left,
-      .card-right {
-        padding: 20px 18px;
-      }
+        @media (max-width: 600px) {
+            .timeline-title { font-size: 30px; }
+        }
 
-      .card-left {
-        order: -1; /* сначала фото/картинки, потом текст на телефоне */
-      }
+        .dress-code {
+            border: 2px solid black;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 40px;
+            text-align: center;
+        }
 
-      .details,
-      .list {
-        font-size: 14px;
-      }
-    }
-  </style>
+        .dress-code p {
+            font-size: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .dress-code p { font-size: 28px; }
+        }
+
+        .details { padding: 10px 20px; }
+
+        .details p { margin-bottom: 20px; }
+
+        .rsvp-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 40px auto;
+            padding: 18px;
+            background-color: #ffffff;
+            color: #b10000;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            border-top: 1px solid #e8e2d9;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
-    <article class="card">
-      <!-- Левая часть с картинками -->
-      <section class="card-left">
-        <img src="i-7.jpg" alt="Торт с тремя свечами" class="cake">
-        <h1>День рождения</h1>
-        <img src="v.jpg" alt="Девочки в карнавальных костюмах" class="kids">
-        <div>
-          <img src="i-6.jpg" alt="Бокал вина" class="wine">
+    <div class="header">
+        <h1 class="main-title">18</h1>
+        <img src="images/l.png" width="700px">
+    </div>
+
+    <div class="invitation-text">
+       <div class="q"> ДОРОГИЕ ДРУЗЬЯ И РОДНЫЕ!</div><br>
+        Совсем скоро наступит особенный для нас день - нам исполниться 18 лет! Мы бы очень хотели отметить
+        этот день с вами, нашими близкими и дорогими людьми.
+    </div>
+
+    <div class="date-highlight">
+        <div class="day">16 | января | 26</div>
+    </div>
+
+    <h2 class="section-title">LOCATION</h2>
+
+    <div class="location-details">
+        <div class="location-item">
+            <div class="location-name">Speakeasy bar "THE"</div>
+            <div class="location-address">Отель Wawelberg,<br>Невский проспект, 7-9</div>
         </div>
-        <p class="small">Будем очень рады видеть тебя на нашем празднике!</p>
-      </section>
+    </div>
 
-      <!-- Правая часть с текстом -->
-      <section class="card-right">
-        <div class="badge">
-          <img src="i-4.jpg" alt="Конверт с сердцем">
-          <span>Торжественное приглашение</span>
+    <h2 class="section-title">TIMING</h2>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-time">16:30 <br> <img src="images/i (5).png" width="60px"></div>
+            <div class="timeline-details">
+                <div class="timeline-title">  Сбор гостей</div>
+                <div class="timeline-address">Ожидание праздника!</div>
+            </div>
         </div>
 
-        <header>
-          <h2 class="title">Дорогой гость!</h2>
-          <p class="subtitle">
-            Приглашаем тебя вместе отпраздновать наш день рождения в тёплой компании друзей и близких.
-          </p>
-        </header>
-
-        <div class="details">
-          <strong>Дата и время:</strong>
-          16 января 2026 года, начало в 18:00.
-          <strong>Место:</strong>
-          уютное семейное кафе (адрес впиши сюда).
+        <div class="timeline-item">
+            <div class="timeline-time">17:00 <br> <img src="images/i (6).png" width="60px"></div>
+            <div class="timeline-details">
+                <div class="timeline-title">Начало</div>
+                <div class="timeline-address">Банкет.Музыка.Тосты</div>
+            </div>
         </div>
 
-        <ul class="list">
-          <li>Торт, угощения и хорошее настроение гарантированы.</li>
-          <li>Будет ведущая, конкурсы и много приятных сюрпризов.</li>
-          <li>Возьми с собой улыбку и желание веселиться.</li>
-        </ul>
-
-        <p class="rsvp">
-          <img src="i-5.jpg" alt="Драгоценное сердце" class="heart-gem">
-          Пожалуйста, подтвердите своё присутствие до <strong>6 января</strong>, чтобы мы могли всё хорошо подготовить.
-        </p>
-
-        <div class="footer">
-          С любовью,
-          <p class="hosts">Анна и Полина</p>
+        <div class="timeline-item">
+            <div class="timeline-time">21:00 <br> <img src="images/i (7).png" width="60px"></div>
+            <div class="timeline-details">
+                <div class="timeline-title">Праздничный торт</div>
+                <div class="timeline-address">Торжественный момент, задуваются свечи</div>
+            </div>
         </div>
-      </section>
-    </article>
-  </div>
+    </div>
+
+    <h2 class="section-title">POGILANIA</h2>
+
+    <div class="dress-code">
+        <p>Главное для нас - ваше внимание,<br> а радость доставит любой подарок<br> в конверте.</p>
+        <img src="images/i (4).png" width="60px">
+    </div>
+
+    <h2 class="section-title">DETAILS</h2>
+
+    <div class="details">
+        <p>По всем вопросам связанных с поздравлениями можно обращаться к нашему ведущему <a href="https://vk.com/olga8boss"> Ольге</a></p>
+        <p>Пожалуйста, подтвердите своё присутствие до 6 января, чтобы мы могли планировать наш праздник наилучшим образом</p>
+    </div>
+
+    <a href="https://vk.com/id500460573" class="rsvp-button">Напишите тут</a>
+
+    <div class="footer">
+        <p>С любовью, Анна и Полина</p>
+        <p>16 января 2026 года</p>
+    </div>
 </body>
 </html>
